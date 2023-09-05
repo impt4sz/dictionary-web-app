@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/harsha-rvh/dictionary-web-app)
 - Live Site URL: [vercel](https://your-live-site-url.com)
 
 ## My process
