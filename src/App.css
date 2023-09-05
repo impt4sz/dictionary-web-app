@@ -1,0 +1,241 @@
+@font-face {
+  font-family: "inconsolata";
+  src: url("/fonts/inconsolata/Inconsolata-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: "inter";
+  src: url("/fonts/inter/Inter-VariableFont_slnt,wght.ttf");
+}
+
+@font-face {
+  font-family: "lora";
+  src: url("/fonts/lora/Lora-Italic-VariableFont_wght.ttf");
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li::marker {
+  color: var(--purple-color);
+}
+
+.error-border {
+  border: 1px solid #ff5252;
+}
+
+.focus-border {
+  border: 1px solid var(--purple-color);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sans {
+  font-family: "inter", sans-serif;
+}
+
+.serif {
+  font-family: "lora", sans-serif;
+}
+
+.mono {
+  font-family: "inconsolata", sans-serif;
+}
+
+.error-container {
+  text-align: center;
+}
+
+.container {
+  width: var(--container-width-desktop);
+}
+
+.Header {
+  width: 100%;
+  padding: 1rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.search-form {
+  box-sizing: border-box;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--input-background);
+  border-radius: 16px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-form-error {
+  color: #ff5252;
+  font-style: normal;
+  font-size: var(--body-medium-size);
+  font-weight: 400;
+  line-height: normal;
+}
+
+.search-form input {
+  width: 100%;
+  height: 95%;
+  border: none;
+  background-color: var(--input-background);
+  font-size: var(--body-medium-size);
+  color: var(--font-color);
+  font-weight: 700;
+}
+
+.search-form input:focus {
+  outline: none;
+}
+
+.bodyHeader-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.word-title {
+  font-size: var(--header-size);
+  color: var(--font-color);
+  font-weight: 700;
+  margin: 0;
+}
+
+.phonetic {
+  color: var(--purple-color);
+  font-size: var(--header-small-size);
+}
+
+.small-header {
+  color: var(--font-color);
+  font-size: var(--header-small-size);
+  font-weight: 700;
+  line-height: normal;
+}
+
+.definition {
+  color: var(--font-color);
+  font-size: var(--body-small-size);
+  line-height: 1.5rem;
+}
+
+.example {
+  font-size: var(--body-small-size) !important;
+  padding-left: 1.37rem;
+}
+
+.light-text {
+  font-size: var(--body-medium-size);
+  color: var(--light-font);
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+.partSpeech-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.definition-strings {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+}
+
+.definition-string {
+  color: var(--purple-color);
+  font-size: var(--body-medium-size);
+  margin: 0;
+}
+
+.definition-string:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.line-border {
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+}
+.source-container {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  margin-bottom: 1rem;
+}
+
+.source {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 10px;
+  color: var(--font-color) !important;
+  text-decoration: none;
+}
+
+.source:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.small-text-footer {
+  font-size: var(--small-text);
+  color: var(--light-font);
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .container {
+    width: var(--container-width-tablet);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: var(--container-width-mobile);
+  }
+  .word-title {
+    font-size: var(--mobile-header);
+  }
+  .definition {
+    font-size: var(--body-small-mobile);
+  }
+  .light-text {
+    font-size: var(--body-medium-mobile);
+  }
+  .example {
+    font-size: var(--body-small-mobile) !important;
+  }
+  .definition-string {
+    font-size: var(--body-medium-mobile);
+  }
+}
